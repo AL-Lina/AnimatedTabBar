@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EB018911FF09FF5EFF35F4C /* Pods_AnimatedTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649FF5F43DA474356AF67719 /* Pods_AnimatedTabBar.framework */; };
 		ED676D23279771AB008AD1FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED676D22279771AB008AD1FD /* AppDelegate.swift */; };
 		ED676D25279771AB008AD1FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED676D24279771AB008AD1FD /* SceneDelegate.swift */; };
 		ED676D27279771AB008AD1FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED676D26279771AB008AD1FD /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		649FF5F43DA474356AF67719 /* Pods_AnimatedTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimatedTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EED12A0032A011C1CAB084 /* Pods-AnimatedTabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimatedTabBar.release.xcconfig"; path = "Target Support Files/Pods-AnimatedTabBar/Pods-AnimatedTabBar.release.xcconfig"; sourceTree = "<group>"; };
+		980E73ED1BA3DAE14138D040 /* Pods-AnimatedTabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimatedTabBar.debug.xcconfig"; path = "Target Support Files/Pods-AnimatedTabBar/Pods-AnimatedTabBar.debug.xcconfig"; sourceTree = "<group>"; };
 		ED676D1F279771AB008AD1FD /* AnimatedTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED676D22279771AB008AD1FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED676D24279771AB008AD1FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB018911FF09FF5EFF35F4C /* Pods_AnimatedTabBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		054A5B26DCA4E300C2BDE06D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				980E73ED1BA3DAE14138D040 /* Pods-AnimatedTabBar.debug.xcconfig */,
+				66EED12A0032A011C1CAB084 /* Pods-AnimatedTabBar.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3FF0378A25203B10619F9ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				649FF5F43DA474356AF67719 /* Pods_AnimatedTabBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED676D16279771AB008AD1FD = {
 			isa = PBXGroup;
 			children = (
 				ED676D21279771AB008AD1FD /* AnimatedTabBar */,
 				ED676D20279771AB008AD1FD /* Products */,
+				054A5B26DCA4E300C2BDE06D /* Pods */,
+				B3FF0378A25203B10619F9ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED676D33279771B1008AD1FD /* Build configuration list for PBXNativeTarget "AnimatedTabBar" */;
 			buildPhases = (
+				DD286CBB16A02C877995AC6F /* [CP] Check Pods Manifest.lock */,
 				ED676D1B279771AB008AD1FD /* Sources */,
 				ED676D1C279771AB008AD1FD /* Frameworks */,
 				ED676D1D279771AB008AD1FD /* Resources */,
+				5516D2557A30DAD547D333D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5516D2557A30DAD547D333D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimatedTabBar/Pods-AnimatedTabBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimatedTabBar/Pods-AnimatedTabBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimatedTabBar/Pods-AnimatedTabBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD286CBB16A02C877995AC6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimatedTabBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED676D1B279771AB008AD1FD /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		ED676D34279771B1008AD1FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980E73ED1BA3DAE14138D040 /* Pods-AnimatedTabBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		ED676D35279771B1008AD1FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66EED12A0032A011C1CAB084 /* Pods-AnimatedTabBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
